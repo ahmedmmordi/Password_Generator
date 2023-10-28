@@ -122,7 +122,6 @@ if validate_program_choice:
         validate_password = checking_password(get_password)
 
         if validate_password:
-            os.system("cls")
             result = get_recommendations(get_password)
 
             # Checking the length of the password
@@ -131,13 +130,13 @@ if validate_program_choice:
 
             size = len(result)
             if (size==0):
-                print("The password you use is both reliable and strong.")
+                print("\nThe password you use is both reliable and strong.")
             elif (size==1):
-                print("Our only recommendation is:")
+                print("\nOur only recommendation is:")
                 for recommendation in result:
                     print(recommendation)
             else:
-                print("Our recommendations are:")
+                print("\nOur recommendations are:")
                 # Iterate through the list of recommendations
                 for recommendation in result:
                     print(recommendation)
